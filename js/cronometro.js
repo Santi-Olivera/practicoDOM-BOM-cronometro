@@ -18,7 +18,7 @@ function actualizarDisplay() {
 }
 
 botonIniciar.addEventListener("click", () => {
-  if (intervaloId) return; // Si ya hay un intervalo en curso, no hace nada
+  if (intervaloId) return;
   intervaloId = setInterval(() => {
     segundos++;
     actualizarDisplay();
@@ -26,15 +26,15 @@ botonIniciar.addEventListener("click", () => {
 });
 
 botonPausar.addEventListener("click", () => {
-  clearInterval(intervaloId); // Detiene el cronómetro
-  intervaloId = null; // Resetea el ID del intervalo
+  clearInterval(intervaloId); 
+  intervaloId = null; 
 });
 
 botonReiniciar.addEventListener("click", () => {
-  clearInterval(intervaloId); // Detiene el cronómetro
-  intervaloId = null; // Resetea el ID del intervalo
-  segundos = 0; // Reinicia el contador de tiempo
-  actualizarDisplay(); // Actualiza la pantalla con el tiempo reiniciado
+  clearInterval(intervaloId);
+  intervaloId = null; 
+  segundos = 0;
+  actualizarDisplay();
 });
 
 actualizarDisplay();
